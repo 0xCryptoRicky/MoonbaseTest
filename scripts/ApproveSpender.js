@@ -2,7 +2,7 @@ const ethers = require('ethers');
 
 const provider = new ethers.providers.JsonRpcProvider('https://rpc.api.moonbase.moonbeam.network')
 
-const wallet = new ethers.Wallet('57e0a0649aa48db041c9b486e61ac7addd80f972dff82a7c01dac2d08b596b3f', provider);
+const wallet = new ethers.Wallet(process.env.PRIVATE_KEY, provider);
 
 // ERC20 Token contract address
 const tokenAddress = '0x1862a4107D2Db1def799d8884eAA47Eb96fc797a';
